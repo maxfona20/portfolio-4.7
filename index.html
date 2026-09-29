@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Max | Cybersecurity &amp; Web Development Portfolio</title>
+  <meta name="description" content="Portfolio of Max, a Michigan State University computer science student concentrating in cybersecurity, with projects in Dockerized microservices and React.">
+  <meta name="author" content="Max">
+  <meta name="keywords" content="portfolio, cybersecurity, computer science, Michigan State University, web development, Flask, React, Docker">
+  <meta name="theme-color" content="#18453b">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Max | Cybersecurity &amp; Web Development Portfolio">
+  <meta property="og:description" content="Computer science student, cybersecurity concentration, builder of secure and useful web things.">
+  <meta property="og:image" content="images/headshot.jpg">
+</head>
+<body>
+
+  <a href="#main-content">Skip to main content</a>
+
+  <header>
+    <p>
+      <strong>&lt;max /&gt;</strong>
+      <br>
+      <em>secure by design, friendly by default</em>
+    </p>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section id="home" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Hi, I'm Max. I build things, then I try to break them.</h1>
+      <p>
+        I'm a computer science student at Michigan State University with a
+        cybersecurity concentration. I like software that works well for real
+        people and holds up when someone is actively trying to misuse it.
+      </p>
+
+      <figure>
+        <img src="images/headshot.jpg" alt="Portrait of Max smiling, taken outdoors" width="300" height="300">
+        <figcaption>Me, hopefully looking more relaxed than I feel during finals week.</figcaption>
+      </figure>
+
+      <p>
+        <a href="#projects">See my projects</a> or
+        <a href="#contact">get in touch</a>.
+      </p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+
+      <article aria-labelledby="story-heading">
+        <h3 id="story-heading">My story so far</h3>
+        <p>
+          I'm a sophomore at <a href="https://msu.edu/" rel="noopener noreferrer" target="_blank">Michigan State University</a>,
+          studying computer science with a concentration in cybersecurity and a
+          minor in information technology. The concentration teaches me how
+          attackers think. The IT minor keeps me honest about how systems get
+          deployed and maintained in the real world.
+        </p>
+        <p>
+          Before school got serious about security, I spent time as a website
+          development intern, where I learned that shipping something people
+          actually use is a different skill from getting it to work on my laptop.
+        </p>
+        <p>
+          I also work as a waiter, and I'll defend this as legitimate
+          engineering experience. A dining room during a Friday rush is a
+          distributed system under load: limited resources, unpredictable
+          inputs, and users who will tell you immediately when something is
+          broken.
+        </p>
+      </article>
+
+      <article aria-labelledby="outlook-heading">
+        <h3 id="outlook-heading">How I think about security</h3>
+        <blockquote>
+          <p>Security that people work around isn't security. It's paperwork.</p>
+        </blockquote>
+        <p>
+          I believe the best defenses are the ones users barely notice. That
+          means clear error messages, sensible defaults, and audit trails that
+          answer questions after something goes wrong. I want a career where
+          I can make systems safer <em>and</em> easier to use, and I don't see
+          those as competing goals.
+        </p>
+      </article>
+
+      <aside aria-labelledby="skills-heading">
+        <h3 id="skills-heading">Toolbox</h3>
+        <dl>
+          <dt>Languages &amp; frameworks</dt>
+          <dd>Python, Flask, JavaScript, React, SQL, HTML</dd>
+          <dt>Infrastructure</dt>
+          <dd>Docker, JWT-based authentication, HTTP fundamentals</dd>
+          <dt>Currently studying</dt>
+          <dd>
+            <abbr title="CompTIA Network Plus certification">Network+</abbr>
+            (in progress), followed by
+            <abbr title="CompTIA Security Plus certification">Security+</abbr>
+          </dd>
+        </dl>
+      </aside>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <p>A few things I've built or am building, and what each one taught me.</p>
+
+      <article aria-labelledby="flask-heading">
+        <header>
+          <h3 id="flask-heading">Secure Document Service (Dockerized Flask Microservices)</h3>
+          <p>Course project, CSE 380 &middot; <time datetime="2026-04">Spring 2026</time></p>
+        </header>
+
+        <figure>
+          <img src="images/flask-architecture.png" alt="Diagram of four Docker containers (authentication, documents, search, and audit logging) connected to one another" width="600" height="340">
+          <figcaption>Architecture overview: four services, each in its own container.</figcaption>
+        </figure>
+
+        <p>
+          A document management system split into four independent Flask
+          services, all orchestrated with Docker.
+        </p>
+
+        <h4>What it does</h4>
+        <ul>
+          <li>Authenticates users with JSON Web Tokens (JWT)</li>
+          <li>Stores and manages documents</li>
+          <li>Searches across stored documents</li>
+          <li>Records an audit log of who did what</li>
+        </ul>
+
+        <h4>What I learned</h4>
+        <ul>
+          <li>Passed all 15 of the project's test cases.</li>
+          <li>Splitting a system into services makes trust boundaries explicit: every request between services is a decision about who to believe.</li>
+          <li>Audit logging is much easier to design in from the start than to bolt on later.</li>
+        </ul>
+      </article>
+
+      <article aria-labelledby="manoo-heading">
+        <header>
+          <h3 id="manoo-heading">Manoo</h3>
+          <p>Team project &middot; React &middot; In progress</p>
+        </header>
+
+        <figure>
+          <img src="images/manoo-screenshot.png" alt="Screenshot of the Manoo app showing a list of items neighbors can rent" width="600" height="340">
+          <figcaption>Manoo's browsing view, mid-redesign.</figcaption>
+        </figure>
+
+        <p>
+          Manoo is a neighbor-to-neighbor rental app for Ia&#537;i, Romania.
+          The idea is simple: people own things they rarely use, and their
+          neighbors need those things occasionally. Manoo connects them.
+        </p>
+
+        <h4>Highlights</h4>
+        <ul>
+          <li>Built with a small team using React</li>
+          <li>Includes an earnings calculator that shows owners what their gear could make</li>
+          <li>Includes daily and weekly challenges that keep people coming back</li>
+        </ul>
+
+        <h4>What I learned</h4>
+        <p>
+          Real user feedback is humbling and useful. Testers loved the
+          challenges, found the onboarding too thin, and told us the annual
+          income figure in the calculator confused casual users. The redesign
+          is now driven by what people actually said, not what we assumed.
+        </p>
+      </article>
+
+      <article aria-labelledby="certs-heading">
+        <header>
+          <h3 id="certs-heading">Security Certification Roadmap</h3>
+          <p>Self-directed &middot; Ongoing</p>
+        </header>
+
+        <p>
+          Alongside coursework, I'm working through CompTIA certifications
+          to build a solid networking and security foundation.
+        </p>
+
+        <ol>
+          <li>Network+ (in progress), studying with <a href="https://www.professormesser.com/" rel="noopener noreferrer" target="_blank">Professor Messer's free training and practice exams</a></li>
+          <li>Security+ (next)</li>
+        </ol>
+      </article>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>
+        I'm looking for internship and learning opportunities in cybersecurity
+        and web development. If you're building something interesting, or you
+        just want to talk shop, I'd love to hear from you.
+      </p>
+
+      <address>
+        Email: <a href="mailto:you@example.com">you@example.com</a><br>
+        GitHub: <a href="https://github.com/your-username" rel="noopener noreferrer" target="_blank">github.com/your-username</a><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/your-profile" rel="noopener noreferrer" target="_blank">linkedin.com/in/your-profile</a>
+      </address>
+
+      <form name="contact" method="post" data-netlify="true">
+        <fieldset>
+          <legend>Send me a message</legend>
+
+          <p>
+            <label for="contact-name">Name</label><br>
+            <input type="text" id="contact-name" name="name" autocomplete="name" required>
+          </p>
+
+          <p>
+            <label for="contact-email">Email</label><br>
+            <input type="email" id="contact-email" name="email" autocomplete="email" required>
+          </p>
+
+          <p>
+            <label for="contact-topic">Topic</label><br>
+            <select id="contact-topic" name="topic">
+              <option value="opportunity">Internship or job opportunity</option>
+              <option value="collab">Project collaboration</option>
+              <option value="hello">Just saying hello</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="contact-message">Message</label><br>
+            <textarea id="contact-message" name="message" rows="5" cols="40" required></textarea>
+          </p>
+
+          <p><button type="submit">Send message</button></p>
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><small>&copy; <time datetime="2026">2026</time> Max. Built by hand with semantic HTML.</small></p>
+    <p><a href="#home">Back to top</a></p>
+  </footer>
+
+</body>
+</html>

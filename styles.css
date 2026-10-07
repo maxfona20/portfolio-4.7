@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
+/* A small, reusable palette. Layout uses normal flow and inline-block only. */
+:root {
+  --background: #f5f3ec;
+  --surface: #ffffff;
+  --text: #24332e;
+  --muted: #52635b;
+  --accent: #18453b;
+  --tint: #e8eee7;
+  --border: #cbd5cc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+body > header, main, body > footer {
+  width: 90%;
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+body > header {
+  padding: 2rem 0 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+body > header strong {
+  color: var(--accent);
+  font-size: 1.4rem;
+  letter-spacing: -0.04em;
+}
+
+body > header em {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: normal;
+}
+
+nav ul {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 0.4rem 0.5rem 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: var(--tint);
+}
+
+section {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 1rem;
+}
+
+#home {
+  padding-top: 3rem;
+}
+
+h1, h2, h3, h4 {
+  color: var(--accent);
+  line-height: 1.25;
+}
+
+h1 {
+  max-width: 20ch;
+  margin: 0 0 1.25rem;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.85rem;
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -6rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+figure {
+  margin: 1.5rem 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 6px solid var(--surface);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgb(24 69 59 / 14%);
+}
+
+#home img {
+  width: 17rem;
+  margin: 1.75rem 0 1.25rem 0.5rem;
+  transform: rotate(-2deg);
+}
+
+figcaption {
+  max-width: 48ch;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+article {
+  margin-top: 1.25rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  box-shadow: 0 3px 12px rgb(24 69 59 / 4%);
+}
+
+article header p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+article > :last-child {
+  margin-bottom: 0;
+}
+
+blockquote {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--tint);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+blockquote p {
+  margin: 0;
+  font-weight: 500;
+}
+
+aside {
+  margin-top: 1.25rem;
+  padding: 1.5rem;
+  background: var(--tint);
+  border-radius: 0.85rem;
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  margin-top: 0.75rem;
+  font-weight: 700;
+}
+
+dd {
+  margin: 0.2rem 0 0;
+}
+
+ul, ol {
+  padding-left: 1.3rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+  cursor: help;
+}
+
+address {
+  margin: 1.5rem 0;
+  font-style: normal;
+  line-height: 2;
+}
+
+fieldset {
+  min-width: 0;
+  margin: 1.5rem 0 0;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.7rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--muted);
+  border-radius: 0.4rem;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 0.75rem 1.25rem;
+  background: var(--accent);
+  color: var(--surface);
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--text);
+}
+
+body > footer {
+  padding: 2rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--surface);
+}

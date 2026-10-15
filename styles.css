@@ -373,7 +373,7 @@ article, aside, fieldset {
   width: 100%;
 }
 
-/* AI prompt 2 — Small-screen refinement:
+/* AI prompt 1 — Small-screen refinement:
    Only add CSS. At min-width: 30rem (480px), increase the page gutters and
    card padding, spread navigation links slightly, and keep every section
    in one column. Avoid introducing desktop layout prematurely.
@@ -393,8 +393,8 @@ article, aside, fieldset {
   }
 }
 
-/* AI prompt 3 — Tablet hero, navigation and footer:
-   Work only in styles.css without HTML changes. At min-width: 48rem
+/* AI prompt 2 — Tablet hero, navigation and footer:
+   At min-width: 48rem
    (768px), use named Grid areas for the hero: title, intro and links on
    the left and the portrait spanning those rows on the right. Use
    minmax() for safe sizing and put brand and navigation in a Flexbox
@@ -433,8 +433,8 @@ article, aside, fieldset {
   #home > p:last-of-type { grid-area: links; }
   #home > figure { grid-area: portrait; align-self: center; }
 
-  /* AI prompt 3a — Projects section only:
-     Modify only styles.css and target only the existing #projects section.
+  /* AI prompt 2a — Projects section only:
+     Target only the existing #projects section.
      Keep the green headings, white rounded cards and subtle shadows.
      At 48rem and above, turn the mobile single column into a two-column
      Grid. Span the section heading and introduction across both columns.
@@ -464,7 +464,7 @@ article, aside, fieldset {
   }
 }
 
-/* AI prompt 4 — About and Contact desktop sections:
+/* AI prompt 3 — About and Contact desktop sections:
    Change only CSS. At min-width: 64rem (1024px), give About a named-area
    Grid: its heading spans the page, the story occupies the left column
    across two rows, and security and toolbox occupy the right column.
@@ -510,8 +510,8 @@ article, aside, fieldset {
   #contact > form { grid-area: form; }
 }
 
-/* AI prompt 5 — Wide-screen refinement:
-   Only change CSS. At min-width: 80rem (1280px), show all three project
+/* AI prompt 4 — Wide-screen refinement:
+   At min-width: 80rem (1280px), show all three project
    cards in equal-width columns and remove the first card's tablet span.
    Keep section heading and intro full-width. Increase card gaps and
    section spacing, retaining the 72rem page maximum for readability.

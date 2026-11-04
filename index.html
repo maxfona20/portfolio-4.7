@@ -35,10 +35,10 @@
     </nav>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
 
     <!-- HERO -->
-    <section id="home" aria-labelledby="hero-heading">
+    <section id="home" tabindex="-1" aria-labelledby="hero-heading">
       <h1 id="hero-heading">Hi, I'm Max. I build things, then I try to break them.</h1>
       <p>
         I'm a computer science student at Michigan State University with a
@@ -58,13 +58,13 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" aria-labelledby="about-heading">
+    <section id="about" tabindex="-1" aria-labelledby="about-heading">
       <h2 id="about-heading">About Me</h2>
 
       <article aria-labelledby="story-heading">
         <h3 id="story-heading">My story so far</h3>
         <p>
-          I'm a Junior at <a href="https://msu.edu/" rel="noopener noreferrer" target="_blank">Michigan State University</a>,
+          I'm a Junior at <a href="https://msu.edu/" rel="noopener noreferrer" target="_blank">Michigan State University<span class="sr-only"> (opens in a new tab)</span></a>,
           studying computer science with a concentration in cybersecurity and a
           minor in information technology. The concentration teaches me how
           attackers think. The IT minor keeps me honest about how systems get
@@ -116,7 +116,7 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" aria-labelledby="projects-heading">
+    <section id="projects" tabindex="-1" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Projects</h2>
       <p>A few things I've built or am building, and what each one taught me.</p>
 
@@ -195,14 +195,14 @@
         </p>
 
         <ol>
-          <li>Network+ (in progress), studying with <a href="https://www.professormesser.com/" rel="noopener noreferrer" target="_blank">Professor Messer's free training and practice exams</a></li>
+          <li>Network+ (in progress), studying with <a href="https://www.professormesser.com/" rel="noopener noreferrer" target="_blank">Professor Messer's free training and practice exams<span class="sr-only"> (opens in a new tab)</span></a></li>
           <li>Security+ (next)</li>
         </ol>
       </article>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" aria-labelledby="contact-heading">
+    <section id="contact" tabindex="-1" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Contact</h2>
       <p>
         I'm looking for internship and learning opportunities in cybersecurity
@@ -212,21 +212,22 @@
 
       <address>
         Email: <a href="mailto:maxfona20@gmail.com">maxfona20@gmail.com</a><br>
-        GitHub: <a href="https://github.com/maxfona20" rel="noopener noreferrer" target="_blank">github.com/maxfona20</a><br>
-        LinkedIn: <a href="https://www.linkedin.com/in/maximilian-fona" rel="noopener noreferrer" target="_blank">linkedin.com/in/maximilian-fona</a>
+        GitHub: <a href="https://github.com/maxfona20" rel="noopener noreferrer" target="_blank">github.com/maxfona20<span class="sr-only"> (opens in a new tab)</span></a><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/maximilian-fona" rel="noopener noreferrer" target="_blank">linkedin.com/in/maximilian-fona<span class="sr-only"> (opens in a new tab)</span></a>
       </address>
 
-      <form name="contact" method="post" data-netlify="true">
+      <form name="contact" method="post" data-netlify="true" aria-describedby="required-fields">
         <fieldset>
           <legend>Send me a message</legend>
+          <p id="required-fields">Name, email, and message are required. Topic is optional.</p>
 
           <p>
-            <label for="contact-name">Name</label><br>
+            <label for="contact-name">Name (required)</label><br>
             <input type="text" id="contact-name" name="name" autocomplete="name" required>
           </p>
 
           <p>
-            <label for="contact-email">Email</label><br>
+            <label for="contact-email">Email (required)</label><br>
             <input type="email" id="contact-email" name="email" autocomplete="email" required>
           </p>
 
@@ -240,7 +241,7 @@
           </p>
 
           <p>
-            <label for="contact-message">Message</label><br>
+            <label for="contact-message">Message (required)</label><br>
             <textarea id="contact-message" name="message" rows="5" cols="40" required></textarea>
           </p>
 

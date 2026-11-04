@@ -55,3 +55,30 @@ Verified in Chromium with real keyboard events on November 4, 2026:
 - Shift+Tab moves backward through controls without trapping focus.
 - Tab from Send message reaches Back to top; Enter focuses the Home section and changes the fragment to `#home`.
 - No form submission was made.
+
+## Published verification and final results
+
+The site changes were committed as `1e95718` and pushed to `main`. The public Netlify site was then checked directly: the deployed HTML contains the new `tabindex="-1"` focus targets and required-field guidance.
+
+PageSpeed Insights was rerun against that published version on November 4, 2026 at 1:43 PM EST, using Lighthouse 13.6.0:
+
+| Profile | Accessibility | Passed | Not applicable | Manual checks |
+| --- | --- | --- | --- | --- |
+| Mobile | **100/100** | 27 | 36 | 10 |
+| Desktop | **100/100** | 27 | 36 | 10 |
+
+[Final mobile report](https://pagespeed.web.dev/analysis/https-portfolio-lab-fona-netlify-app/c87lirqq0s?form_factor=mobile) · [Final desktop report](https://pagespeed.web.dev/analysis/https-portfolio-lab-fona-netlify-app/c87lirqq0s?form_factor=desktop)
+
+![Published site with 100 mobile accessibility score](evidence/pagespeed-mobile-100.jpg)
+
+![Published site with 100 desktop accessibility score](evidence/pagespeed-desktop-100.jpg)
+
+## Submission checklist
+
+- [x] Audit the published portfolio with PageSpeed Insights.
+- [x] Place ACCESSIBILITY.md at the repository root.
+- [x] Improve keyboard navigation and document the changes.
+- [x] Verify 100 accessibility on the published site and save screenshots.
+- [x] Commit and push the site improvements; verify Netlify published them.
+- [x] Prepare a timed keyboard walkthrough and narration.
+- [ ] Record and submit the student's own 1–2 minute keyboard-only walkthrough with narration or key captions.

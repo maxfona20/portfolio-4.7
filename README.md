@@ -25,3 +25,7 @@ The existing contact form uses Netlify Forms. Form submissions require a Netlify
 - `styles.css` — core styles
 - `IMG_6124.JPG` — original portfolio photo
 - `validation/` — W3C HTML validation results
+
+## Accessibility
+
+See [ACCESSIBILITY.md](ACCESSIBILITY.md) for the PageSpeed Insights audit, keyboard workflow improvements, test record, and screenshots. See [KEYBOARD-WALKTHROUGH.md](KEYBOARD-WALKTHROUGH.md) for the recording route and narration.

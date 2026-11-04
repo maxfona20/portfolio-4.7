@@ -38,10 +38,6 @@ The initial deployed site was tested using actual keyboard input: the first Tab 
 
 Post-change checks and deployment evidence are recorded below after verification. The test intentionally does not submit a contact message or open an email application.
 
-## Keyboard recording
-
-See [KEYBOARD-WALKTHROUGH.md](KEYBOARD-WALKTHROUGH.md) for a 90-second route and narration. Record yourself navigating the published site using only the keyboard. The recording is a separate deliverable; this document does not claim that it has been recorded.
-
 ### Post-change local keyboard verification
 
 Verified in Chromium with real keyboard events on November 4, 2026:
@@ -73,12 +69,3 @@ PageSpeed Insights was rerun against that published version on November 4, 2026 
 
 ![Published site with 100 desktop accessibility score](evidence/pagespeed-desktop-100.jpg)
 
-## Submission checklist
-
-- [x] Audit the published portfolio with PageSpeed Insights.
-- [x] Place ACCESSIBILITY.md at the repository root.
-- [x] Improve keyboard navigation and document the changes.
-- [x] Verify 100 accessibility on the published site and save screenshots.
-- [x] Commit and push the site improvements; verify Netlify published them.
-- [x] Prepare a timed keyboard walkthrough and narration.
-- [ ] Record and submit the student's own 1–2 minute keyboard-only walkthrough with narration or key captions.

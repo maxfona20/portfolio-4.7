@@ -12,7 +12,10 @@
   <meta property="og:title" content="Max | Cybersecurity &amp; Web Development Portfolio">
   <meta property="og:description" content="Computer science student, cybersecurity concentration, builder of secure and useful web things.">
   <meta property="og:image" content="IMG_6124.JPG">
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="styles.css">
+  <script src="vendor/fuse-7.1.0.min.js" defer></script>
+  <script src="interactions.js" defer></script>
 </head>
 <body>
 
@@ -33,6 +36,10 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" hidden>
+      <span class="theme-icon" aria-hidden="true">◐</span>
+      <span id="theme-toggle-text">Dark mode: off</span>
+    </button>
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -119,6 +126,17 @@
     <section id="projects" tabindex="-1" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Projects</h2>
       <p>A few things I've built or am building, and what each one taught me.</p>
+
+      <div id="project-search-tools" class="project-search-tools" hidden>
+        <label for="project-search">Find a project</label>
+        <p id="project-search-help">Search a project name or technology, like Flask, React, or security.</p>
+        <div class="project-search-row">
+          <input type="search" id="project-search" aria-describedby="project-search-help" aria-controls="flask-heading manoo-heading certs-heading" placeholder="Search projects and technologies" maxlength="100" autocomplete="off">
+          <button type="button" id="project-search-clear">Clear search</button>
+        </div>
+        <p id="project-search-status" role="status" aria-live="polite" aria-atomic="true">Showing all 3 projects.</p>
+        <p id="project-search-empty" hidden>No projects match. Try another term or clear your search.</p>
+      </div>
 
       <article aria-labelledby="flask-heading">
         <header>

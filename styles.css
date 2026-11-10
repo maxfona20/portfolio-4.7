@@ -569,3 +569,63 @@ main:focus, section[tabindex="-1"]:focus {
     box-shadow: none;
   }
 }
+
+/* JavaScript lab: theme tokens and project search share the same palette. */
+:root { color-scheme: light; --button-text: #ffffff; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #101d19;
+  --surface: #1b2c25;
+  --text: #e8f0eb;
+  --muted: #b2c7b9;
+  --accent: #a4d9b2;
+  --tint: #22392d;
+  --border: #456451;
+  --button-text: #102219;
+}
+[hidden] { display: none !important; }
+button { color: var(--button-text); }
+button:hover { color: var(--button-text); }
+:root[data-theme="dark"] button:hover { background: #d2ebd9; }
+::selection { color: var(--button-text); }
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 0.55rem 0.85rem;
+  color: var(--accent);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.theme-toggle:hover, :root[data-theme="dark"] .theme-toggle:hover {
+  color: var(--accent);
+  background: var(--tint);
+}
+.theme-icon { font-size: 1.2rem; line-height: 1; }
+.project-search-tools {
+  grid-column: 1 / -1;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  background: var(--tint);
+}
+.project-search-tools label { display: block; }
+#project-search-help { margin: 0.3rem 0 0.8rem; color: var(--muted); font-size: 0.9rem; }
+.project-search-row { display: flex; align-items: stretch; gap: 0.75rem; }
+.project-search-row input { flex: 1; min-width: 0; width: auto; margin: 0; }
+.project-search-row button { flex: 0 0 auto; }
+#project-search-status { margin: 0.75rem 0 0; color: var(--muted); font-size: 0.9rem; }
+#project-search-empty { margin: 0.75rem 0 0; font-weight: 600; }
+@media (min-width: 48rem) {
+  body > header { flex-wrap: wrap; }
+  .theme-toggle { align-self: center; }
+}
+@media (max-width: 29.99rem) {
+  .project-search-row { flex-direction: column; }
+  .project-search-row button { align-self: flex-start; }
+}

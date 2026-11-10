@@ -69,3 +69,11 @@ PageSpeed Insights was rerun against that published version on November 4, 2026 
 
 ![Published site with 100 desktop accessibility score](evidence/pagespeed-desktop-100.jpg)
 
+
+## JavaScript feature update on November 10 2026
+
+Added a native button for dark/light mode with the stable accessible name “Dark mode” and `aria-pressed`. Both palettes define text, surfaces, accent, border, selection, and button foreground colors. Theme selection can be changed with Space or Enter and survives reloads when local storage is available.
+
+Project search uses Fuse.js 7.1.0 with a visible label and help text, live result count, empty state, and keyboard-operable Clear search control. Escape resets search and returns focus to its input. Hidden project cards use the native `hidden` attribute and are removed from the reading and tab order. Exact text matches are preferred; approximate matches support misspellings when no exact match exists.
+
+Verified in the local browser: dark/light switching, stored choice after reload, an unchanged search after switching theme, “React” matching only Manoo, “Flsk” finding the Flask project, empty results, and Escape restoring all three cards. No browser console warnings or errors were reported. The PageSpeed screenshots above document the November 4 audit; they are not a new score claim for this update.
